@@ -39,19 +39,20 @@
             // 
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox1.Font = new System.Drawing.Font("Tahoma", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(406, 100);
+            this.textBox1.Location = new System.Drawing.Point(406, 89);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(160, 117);
+            this.textBox1.Size = new System.Drawing.Size(160, 132);
             this.textBox1.TabIndex = 7;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(153, 102);
+            this.label3.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(148, 137);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(120, 116);
+            this.label3.Size = new System.Drawing.Size(47, 45);
             this.label3.TabIndex = 6;
             this.label3.Text = "+";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -60,21 +61,21 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(246, 100);
+            this.label2.Location = new System.Drawing.Point(246, 96);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(154, 116);
+            this.label2.Size = new System.Drawing.Size(102, 116);
             this.label2.TabIndex = 5;
-            this.label2.Text = "46";
+            this.label2.Text = "0";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 102);
+            this.label1.Location = new System.Drawing.Point(12, 98);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(154, 116);
+            this.label1.Size = new System.Drawing.Size(102, 116);
             this.label1.TabIndex = 4;
-            this.label1.Text = "20";
+            this.label1.Text = "0";
             // 
             // secand
             // 

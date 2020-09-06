@@ -22,3 +22,15 @@ C:\Users\Martin Dala\Documents\Back-End\Meus Projectos\GameMath\GameMath\obj\Deb
 C:\Users\Martin Dala\Documents\Back-End\Meus Projectos\GameMath\GameMath\obj\Debug\GameMath.welcome.resources
 C:\Users\Martin Dala\Documents\Back-End\Meus Projectos\GameMath\GameMath\obj\Debug\GameMath.csproj.GenerateResource.Cache
 C:\Users\Martin Dala\Documents\Back-End\Meus Projectos\GameMath\GameMath\bin\Debug\GameMath.pdb
+C:\Users\JUCIANO SILVA\Source\Repos\GameMath\GameMath\bin\Debug\GameMath.exe.config
+C:\Users\JUCIANO SILVA\Source\Repos\GameMath\GameMath\obj\Debug\GameMath.exe
+C:\Users\JUCIANO SILVA\Source\Repos\GameMath\GameMath\obj\Debug\GameMath.pdb
+C:\Users\JUCIANO SILVA\Source\Repos\GameMath\GameMath\bin\Debug\GameMath.exe
+C:\Users\JUCIANO SILVA\Source\Repos\GameMath\GameMath\bin\Debug\GameMath.pdb
+C:\Users\JUCIANO SILVA\Source\Repos\GameMath\GameMath\obj\Debug\GameMath.csprojResolveAssemblyReference.cache
+C:\Users\JUCIANO SILVA\Source\Repos\GameMath\GameMath\obj\Debug\GameMath.erro.resources
+C:\Users\JUCIANO SILVA\Source\Repos\GameMath\GameMath\obj\Debug\GameMath.Form1.resources
+C:\Users\JUCIANO SILVA\Source\Repos\GameMath\GameMath\obj\Debug\GameMath.Properties.Resources.resources
+C:\Users\JUCIANO SILVA\Source\Repos\GameMath\GameMath\obj\Debug\GameMath.secand.resources
+C:\Users\JUCIANO SILVA\Source\Repos\GameMath\GameMath\obj\Debug\GameMath.welcome.resources
+C:\Users\JUCIANO SILVA\Source\Repos\GameMath\GameMath\obj\Debug\GameMath.csproj.GenerateResource.Cache
