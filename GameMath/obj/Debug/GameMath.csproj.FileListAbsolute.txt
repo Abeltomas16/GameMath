@@ -35,3 +35,4 @@ C:\Users\JUCIANO SILVA\Source\Repos\GameMath\GameMath\obj\Debug\GameMath.secand.
 C:\Users\JUCIANO SILVA\Source\Repos\GameMath\GameMath\obj\Debug\GameMath.welcome.resources
 C:\Users\JUCIANO SILVA\Source\Repos\GameMath\GameMath\obj\Debug\GameMath.csproj.GenerateResource.Cache
 C:\Users\JUCIANO SILVA\Source\Repos\GameMath\GameMath\bin\Debug\Bunifu_UI_v1.5.3.dll
+C:\Users\JUCIANO SILVA\Source\Repos\GameMath\GameMath\bin\Debug\XanderUI.dll

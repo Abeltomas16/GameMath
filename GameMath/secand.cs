@@ -26,5 +26,18 @@ namespace GameMath
         {
 
         }
+
+        private void xuiColorPane1_ColorChanged(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.CorApp = xuiColorPane1.SelectedColor;
+            this.BackColor = Properties.Settings.Default.CorApp;
+            Properties.Settings.Default.Save();
+        }
+
+        private void secand_Load(object sender, EventArgs e)
+        {
+            this.BackColor = Properties.Settings.Default.CorApp;
+            
+        }
     }
 }
