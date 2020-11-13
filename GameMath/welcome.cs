@@ -23,5 +23,22 @@ namespace GameMath
             indo.Show();
             this.Visible = false;
         }
+
+        private void definições_btn_Click(object sender, EventArgs e)
+        {
+            Form def = new secand();
+            def.Show();
+        }
+
+        private void welcome_Load(object sender, EventArgs e)
+        {
+            this.BackColor = Properties.Settings.Default.CorApp;
+            definições_btn.BackColor = Properties.Settings.Default.CorApp;
+        }
+
+        private void welcome_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
