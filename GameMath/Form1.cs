@@ -1,4 +1,6 @@
-﻿using System;
+﻿
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,11 +14,11 @@ namespace GameMath
 {
     public partial class Form1 : Form
     {
+        string[] Sinais = new string[4] { "+", "-", "/", "X" };
         Random Número = new Random();
         Random Sinal = new Random();
         Random N2 = new Random();
-        int RespostaCerta;
-        int RespostaCertaD;
+        double RespostaCertaD;
         int sinal;
 
         public Form1()
@@ -26,19 +28,6 @@ namespace GameMath
 
         private void tb1_TextChanged(object sender, EventArgs e)
         {
-            //int Num1 = Convert.ToInt16(tb1.Text);
-
-            //if (Num1 == 4)
-            //{
-            //    secand indo = new secand();
-            //    indo.Show();
-            //    this.Visible = false;
-            //}
-
-
-
-
-
         }
 
         private void GerarNúmero()
@@ -49,96 +38,69 @@ namespace GameMath
             int n2 = Número.Next(100);
             N2_lbl.Text = n2.ToString();
 
-            sinal = Sinal.Next(1, 4);
+            sinal = Sinal.Next(0, 3);
 
-            if (sinal == 1)
+            Func<int, string> func = (int n) =>
             {
-                Sinal_lbl.Text = "+";
-                RespostaCerta = n1 + n2;
-                label1.Visible = false;
-            }
-            else if(sinal == 2)
-            {
-                Sinal_lbl.Text = "-";
-                RespostaCerta = n1 - n2;
-                label1.Visible = false;
-            }
-            else if(sinal == 3)
-            {
-                Sinal_lbl.Text = "/";
-                if( n1 != 0 && n2 != 0)
-                RespostaCertaD = n1 / n2;
-                label1.Visible = true;
-            }
-            else if(sinal == 4)
-            {
-                Sinal_lbl.Text = "X";
-                RespostaCerta = n1 * n2;
-                label1.Visible = false;
-            }
+                return Sinais[n];
+            };
 
+            Sinal_lbl.Text = func(sinal);
 
+            switch (sinal)
+            {
+                case 0:
+                    RespostaCertaD = n1 + n2;
+                    label1.Visible = false;
+                    break;
+                case 1:
+                    RespostaCertaD = n1 - n2;
+                    label1.Visible = false;
+                    break;
+                case 2:
+                    if (n1 != 0 && n2 != 0)
+                        RespostaCertaD = (int)n1 / n2;
+                    label1.Visible = true;
+                    break;
+
+                case 3:
+                    RespostaCertaD = n1 * n2;
+                    label1.Visible = false;
+                    break;
+            }
             Resposta_txt.Clear();
             Resposta_txt.Mask = "000";
-
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             GerarNúmero();
             this.BackColor = Properties.Settings.Default.CorApp;
-            Resposta_txt.BackColor = Properties.Settings.Default.CorApp; 
+            Resposta_txt.BackColor = Properties.Settings.Default.CorApp;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
 
-            if( Resposta_txt.Text != "")
+            if (Resposta_txt.Text != "")
             {
-
-            
-
-            if(sinal == 3)
-            {
-                if (RespostaCertaD == Convert.ToInt32(Resposta_txt.Text))
+                if (RespostaCertaD == Convert.ToInt32(Resposta_txt.Text.Replace(" ", "")))
                 {
-
-                    MessageBox.Show(string.Format("Sim, a Resposta está certa, o resultado é {0}", Resposta_txt.Text), "Resposta Certa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(string.Format("Sim, a Resposta está certa, o resultado é {0}", Resposta_txt.Text));
                     GerarNúmero();
                 }
                 else
                 {
-                    MessageBox.Show(string.Format("Não, o resultado é {0}", RespostaCertaD.ToString()), "Resposta Errada", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(string.Format("Não, o resultado é {0}", RespostaCertaD.ToString()));
                     GerarNúmero();
                 }
             }
             else
             {
-
-            
-            if(RespostaCerta == Convert.ToInt32(Resposta_txt.Text))
-            {
-                
-                MessageBox.Show(string.Format("Sim, a Resposta está certa, o resultado é {0}", Resposta_txt.Text), "Resposta Certa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Insira um Resultado", "Sem Resultado");
                 GerarNúmero();
-            }
-            else
-            {
-                MessageBox.Show(string.Format("Não, o resultado é {0}", RespostaCerta.ToString()), "Resposta Errada", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                GerarNúmero();
-            }
-
-
-            }
-
-            }
-            else
-            {
-                MessageBox.Show("Insira um Resultado", "Sem Resultado", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -155,5 +117,8 @@ namespace GameMath
             Form main = new welcome();
             main.Show();
         }
+
     }
 }
+
+
